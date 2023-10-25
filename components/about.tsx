@@ -19,30 +19,26 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Accounting</span>, I decided to pursue my
-        passion for programming. I enrolled in a coding bootcamp and learned{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
-        <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
-        </span>
-        . I am also familiar with TypeScript and Prisma. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
+        Ever since I was in 8th grade, I have had a passion for building things.
+        It started with LEGO, but I soon found the world of code to be much more enjoyable.
+        I also didn't have to keep begging my parents for more LEGO sets that way.
       </p>
-
-      <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I'm also
-        learning how to play the guitar.
+      <p className="mb-3">
+        I completed my undergraduate degree in Computer Science from BITS Pilani in India. During that, I interned at Goldman Sachs and Amazon as a software engineer.
+        Both of these experiences solidified my passion for using code as a tool to build applications that impact the world at scale.
+      </p>
+      <p className="mb-3">
+        My favorite part of programming is the problem-solving aspect.
+        I love the feeling of finally figuring out a solution to a problem.
+        I am always looking to learn new technologies.
+        I am also a tinkerer at heart. I try to create enjoyable solutions that automate life's boring parts.
+      </p>
+      <p className="mb-3">
+        <b>I am currently looking for a full-time position as a software developer.</b>
+      </p>
+      <p className="mb-3">
+        I play badminton, read and do origami in my free time.
+        Recently I've been getting into making latte art and learning the guitar.
       </p>
     </motion.section>
   );
