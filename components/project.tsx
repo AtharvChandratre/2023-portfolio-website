@@ -12,17 +12,7 @@ import {PiCertificateFill} from "react-icons/pi";
 
 type ProjectProps = (typeof projectsData)[number];
 
-export default function Project({
-  title,
-    subtitle,
-  description,
-  tags,
-    ssrn,
-    github,
-    youtube,
-    certificate,
-    dates
-}: ProjectProps) {
+export default function Project(ProjectProps: any) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -31,6 +21,7 @@ export default function Project({
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
+  // @ts-ignore
   return (
     <motion.div
       ref={ref}
@@ -42,25 +33,27 @@ export default function Project({
     >
       <section className="bg-gray-100 border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 flex flex-col h-full">
-          <h3 className="text-2xl font-semibold text-center">{title}</h3>
-          {subtitle && (<h3 className="text-lg font-semibold text-center">{subtitle}</h3>)}
-          {dates && (<h3 className="text-md font-semibold text-center">{dates}</h3>)}
+          <h3 className="text-2xl font-semibold text-center">{ProjectProps.title}</h3>
+          {ProjectProps.subtitle && (<h3 className="text-lg font-semibold text-center">{ProjectProps.subtitle}</h3>)}
+          {ProjectProps.dates && (<h3 className="text-md font-semibold text-center">{ProjectProps.dates}</h3>)}
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
-            {description}
+            {ProjectProps.description}
           </p>
-          {tags && (<ul className="flex flex-wrap mt-4 gap-2 mb-2">
-            {tags.map((tag, index) => (
-                <li
-                    className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
-                    key={index}
-                >
-                  {tag}
-                </li>
-            ))}
-          </ul>)}
+          {ProjectProps.tags && <ul className="flex flex-wrap mt-4 gap-2 mb-2">
+            {ProjectProps.tags.map((tag: String, index: any) => {
+              return (
+                  <li
+                      className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
+                      key={index}
+                  >
+                    {tag}
+                  </li>
+              );
+            })}
+          </ul>}
           <div className={"flex flex-row gap-2"}>
-          {ssrn && (<a
-              href={ssrn}
+          {ProjectProps.ssrn && (<a
+              href={ProjectProps.ssrn}
               target="_blank"
               rel="noreferrer noopener">
             <button
@@ -70,8 +63,8 @@ export default function Project({
             <IoDocumentTextSharp className={"sm text-white dark:text-white/70"}/> SSRN Link
           </button>
           </a>)}
-          {github && (<a
-              href={github}
+          {ProjectProps.github && (<a
+              href={ProjectProps.github}
               target="_blank"
               rel="noreferrer noopener">
             <button
@@ -81,8 +74,8 @@ export default function Project({
               <AiFillGithub className={"sm text-white dark:text-white/70"}/> GitHub Link
             </button>
           </a>)}
-            {youtube && (<a
-                href={youtube}
+            {ProjectProps.youtube && (<a
+                href={ProjectProps.youtube}
                 target="_blank"
                 rel="noreferrer noopener"
                 className={"pt-2"}>
@@ -93,8 +86,8 @@ export default function Project({
                 <AiFillYoutube className={"sm text-white dark:text-white/70"}/> YouTube Playlist Link
               </button>
             </a>)}
-            {certificate && (<a
-                href={certificate}
+            {ProjectProps.certificate && (<a
+                href={ProjectProps.certificate}
                 target="_blank"
                 rel="noreferrer noopener"
                 className={"pt-2"}>
