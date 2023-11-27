@@ -13,11 +13,9 @@ export default function Home() {
   return (
       <>
           <Script
-              id='GoogelAnalytics1'
-              strategy='lazyOnload'
               src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_TAG}`}
           />
-          <Script id='GoogelAnalytics2' strategy='lazyOnload'>{
+          <Script id='google-analytics'>{
               `window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
