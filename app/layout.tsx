@@ -23,10 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
     <Script
+        id='GoogelAnalytics1'
         strategy='lazyOnload'
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_TAG}`}
     />
-    <Script strategy='lazyOnload'>{
+    <Script id='GoogelAnalytics2' strategy='lazyOnload'>{
       `window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
