@@ -7,9 +7,24 @@ import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
 import Teaching from "@/components/teaching";
 import Education from "@/components/education";
+import Script from "next/script";
 
 export default function Home() {
   return (
+      <>
+          <Script
+              id='GoogelAnalytics1'
+              strategy='lazyOnload'
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_TAG}`}
+          />
+          <Script id='GoogelAnalytics2' strategy='lazyOnload'>{
+              `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', ${process.env.GOOGLE_ANALYTICS_TAG});`
+          }
+          </Script>
     <main className="flex flex-col items-center px-4">
       <Intro />
       <SectionDivider />
@@ -21,5 +36,6 @@ export default function Home() {
         <Teaching />
       <Contact />
     </main>
+      </>
   );
 }
