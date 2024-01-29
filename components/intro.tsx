@@ -61,13 +61,15 @@ export default function Intro() {
       <h1 className=" mt-4 text-xl font-medium !leading-[1.5] sm:text-4xl">Hi, I’m Atharv Chandratre.</h1>
 
       <motion.h2
-        className="mb-10 mt-4 text-xl font-medium !leading-[1.5] sm:text-xl"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
+          className="mb-10 mt-4 text-xl font-medium !leading-[1.5] sm:text-xl"
+          initial={{opacity: 0, y: 100}}
+          animate={{opacity: 1, y: 0}}
       >
-        I'm a software engineer with a knack for tinkering and solving problems.
-        <br />My journey in tech is fueled by curiosity and a desire to learn.
-        <br />I am always exploring new ways to improve and streamline everything around me. I’m here to contribute, learn, and grow in this ever-evolving field of technology.
+        I'm a forward-thinking Software Engineer with a passion for solving challenging problems in collaborative environments.
+        <br /> <br /> My experience at Amazon and Goldman Sachs has honed my skills in creating scalable, robust software
+        solutions, with a special focus on combining cloud and AI technologies with full-stack development.
+        <br /> <br /> I am driven by the challenge of innovating in the tech landscape, and I am always eager to apply my
+        expertise to new, groundbreaking projects.
       </motion.h2>
 
       <motion.div

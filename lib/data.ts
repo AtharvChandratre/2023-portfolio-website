@@ -9,6 +9,8 @@ import wordanalyticsImg from "@/public/wordanalytics.png";
 import {AiOutlineAmazon} from "react-icons/ai";
 import {BsBank} from "react-icons/bs";
 
+import {siGoldmansachs} from "simple-icons";
+
 export const links = [
   {
     name: "Home",
