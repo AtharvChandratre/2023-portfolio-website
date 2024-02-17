@@ -1,11 +1,4 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import bitsImage from "@/public/BITS_Pilani-Logo.svg.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
 import {AiOutlineAmazon} from "react-icons/ai";
 import {BsBank} from "react-icons/bs";
 
@@ -48,8 +41,8 @@ export const teachingData = [
   {
     title: "Intro to Computer Science",
     subtitle: "CS 124: University of Illinois",
-    description: "Teaching Assistant for CS 124: Introduction to Computer Science at the University of Illinois. Was a TA for three semesters.",
-    dates: "Aug 2022 - Dec 2023"
+    description: "Teaching Assistant for CS 124: Introduction to Computer Science at the University of Illinois. Was a TA for four semesters.",
+    dates: "Aug 2022 - May 2024"
   },
   {
     title: "Basics of Blockchain",
