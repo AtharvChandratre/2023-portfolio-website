@@ -1,6 +1,7 @@
 import React from "react";
 import {AiOutlineAmazon} from "react-icons/ai";
-import {BsBank} from "react-icons/bs";
+import { SiGoldmansachs } from "react-icons/si";
+import { SiDoordash } from "react-icons/si";
 
 export const links = [
   {
@@ -83,11 +84,20 @@ export const teachingData = [
 
 export const experiencesData = [
   {
+    title: "Doordash - Software Engineer",
+    location: "San Francisco, CA",
+    description:
+        "Joining in July 2024",
+    icon: React.createElement(SiDoordash),
+    tags: [],
+    date: "Jul 2024 - Present",
+  },
+  {
     title: "Goldman Sachs - Software Engineer Intern",
     location: "New York, NY",
     description:
       "Developed a Kafka Message Correction Platform to address an ongoing issue with invalid Kafka messages, improving message accuracy and decreasing the need for rollbacks.",
-    icon: React.createElement(BsBank),
+    icon: React.createElement(SiGoldmansachs),
     tags: ["React", "Next.js", "Node.js", "Kafka", "MongoDB", "Spring Boot"],
     date: "Jun 2023 - Aug 2023",
   },
@@ -96,7 +106,7 @@ export const experiencesData = [
     location: "Bengaluru, India",
     description:
         "Built user-facing dashboards to display investment banker deal information. Implemented a multi-project CI/CD strategy for multiple projects. Wrote applications to extract and massage data from data warehouses.",
-    icon: React.createElement(BsBank),
+    icon: React.createElement(SiGoldmansachs),
     tags: ["React", "MongoDB", "Spring Boot", "ElasticSearch", "Spark", "Hadoop", "Kubernetes (K8s)", "Gitlab CI/CD"],
     date: "Jul 2021 - Jun 2022",
   },
