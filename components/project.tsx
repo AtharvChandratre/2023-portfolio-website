@@ -63,6 +63,20 @@ export default function Project(ProjectProps: any) {
             <IoDocumentTextSharp className={"sm text-white dark:text-white/70"}/> SSRN Link
           </button>
           </a>)}
+          {ProjectProps.pdf && (
+            <a
+              href={ProjectProps.pdf}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <button
+                type="submit"
+                className="group flex items-center rounded-md justify-center gap-2 h-7 w-32 bg-gray-900 text-white outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65 dark:text-white/70"
+              >
+                <IoDocumentTextSharp className={"sm text-white dark:text-white/70"} /> PDF
+              </button>
+            </a>
+          )}
           {ProjectProps.github && (<a
               href={ProjectProps.github}
               target="_blank"

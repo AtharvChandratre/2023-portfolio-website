@@ -32,7 +32,7 @@ export default function About() {
             you have any!</b>
         </p>
         <p className={"mb-3"}>
-          I'm specialized in full-stack development, cloud computing, and AI technologies. I'm proficient in Python, Java, JavaScript, React, Next.js, Node.js, MongoDB, AWS, Docker, Kubernetes, AI technologies and Kafka. I'm eager to apply these skills in a dynamic software engineering role.
+          I work on backend and data systems at DoorDash, building scalable distributed services and shipping reliable ML-enabled pipelines. I also hold an M.S. in Computer Science (Machine Learning) from UIUC. I enjoy applying ML where it improves real system decisions.
         </p>
         <p className="mb-3">
           My favorite part of programming is the problem-solving aspect.

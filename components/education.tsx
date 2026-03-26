@@ -16,7 +16,7 @@ export default function Education() {
                     ref={ref}
                     className="flex mb-3 sm:mb-8 last:mb-0"
                 >
-                    <section className="flex flex-col justify-center items-center w-full group bg-gray-100 max-w-[32rem] border border-black/5 rounded-lg overflow-hidden relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20 ">
+                    <section className="flex flex-col justify-center items-center w-full group bg-gray-100 max-w-[32rem] border border-black/5 rounded-lg overflow-hidden relative sm:min-h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20 ">
                         <div className="flex justify-center items-center">
                             <Image
                                 src="uofi.svg"
@@ -30,6 +30,9 @@ export default function Education() {
                         <div className="flex flex-col text-center pt-4 pb-7 px-8 sm:pl-2 sm:pr-2 sm:pt-10 sm:max-w-[100%]  h-[100%] w-[18rem]">
                             <h4 className="text-xl font-semibold">University of Illinois {"\n"} Urbana-Champaign</h4>
                             <p className="mt-2 text-gray-700 dark:text-white/70">M.S. in Computer Science</p>
+                            <p className="mt-2 text-gray-700 dark:text-white/70">Aug 2022 — May 2024</p>
+                            <p className="mt-2 text-sm text-gray-700 dark:text-white/70">Specialization in Machine Learning</p>
+                            
                         </div>
                     </section>
                 </div>
@@ -38,7 +41,7 @@ export default function Education() {
                         ref={ref}
                         className="flex mb-3 sm:mb-8 last:mb-0"
                     >
-                        <section className="flex flex-col justify-center items-center w-full group bg-gray-100 max-w-[32rem] border border-black/5 rounded-lg overflow-hidden relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20 ">
+                        <section className="flex flex-col justify-center items-center w-full group bg-gray-100 max-w-[32rem] border border-black/5 rounded-lg overflow-hidden relative sm:min-h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20 ">
                             <div className="flex justify-center items-center">
                                 <Image
                                     src="/bits.svg"
@@ -52,6 +55,7 @@ export default function Education() {
                             <div className="flex flex-col text-center pt-4 pb-7 px-8 sm:pl-2 sm:pr-2 sm:pt-10 sm:max-w-[100%]  h-[100%] w-[18rem]">
                                 <h4 className="text-xl font-semibold">Birla Institute of Technology and Science, Pilani</h4>
                                 <p className="mt-2 text-gray-700 dark:text-white/70">B.E. in Computer Science</p>
+                                <p className="mt-2 text-sm text-gray-700 dark:text-white/70">Aug 2017 — Jun 2021</p>
                             </div>
                         </section>
                     </div>

@@ -66,8 +66,7 @@ export default function Intro() {
           animate={{opacity: 1, y: 0}}
       >
         I'm a forward-thinking Software Engineer with a passion for solving challenging problems in collaborative environments.
-        <br /> <br /> My experience at Amazon and Goldman Sachs has honed my skills in creating scalable, robust software
-        solutions, with a special focus on combining cloud and AI technologies with full-stack development.
+        <br /> <br /> I'm a Software Engineer II at DoorDash in San Francisco, building scalable distributed services and ML-enabled data pipelines. I hold an M.S. in Computer Science (Machine Learning) from UIUC—alongside experience at Goldman Sachs and an Amazon internship.
         <br /> <br /> I am driven by the challenge of innovating in the tech landscape, and I am always eager to apply my
         expertise to new, groundbreaking projects.
       </motion.h2>

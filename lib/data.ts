@@ -82,21 +82,42 @@ export const teachingData = [
   },
 ] as const;
 
+type ExperienceItem = {
+  title: string;
+  location: string;
+  description: string;
+  bullets?: readonly string[];
+  icon: React.ReactElement;
+  tags: readonly string[];
+  date: string;
+};
+
 export const experiencesData = [
   {
-    title: "Doordash - Software Engineer",
+    title: "DoorDash - Software Engineer II",
     location: "San Francisco, CA",
     description:
-        "Joining in July 2024",
+        "Migrated ~1,000 QPS authorization/permission service from Elasticsearch to CockroachDB, cutting latency 62% (351ms → 131ms) and eliminating a recurring incident class tied to substantial ads revenue risk. Architected an Elasticsearch source-of-truth + distributed CDC indexing pipeline for campaign state and delivered a rebuild/backfill system that indexed 14.3M campaigns, improving throughput 26× (150 → 3,900 campaigns/sec) and reducing rebuild time 95% (26 hrs → 1.5 hrs). Optimized Elasticsearch infrastructure footprint to reduce cloud spend by $60K/year, including 52.6% production and 83.2% staging infra cost reductions, by right-sizing clusters based on cost/performance benchmarking while maintaining reliability targets.",
+    bullets: [
+      "Migrated a ~1,000 QPS authorization/permission service from Elasticsearch to CockroachDB, cutting latency 62% (351ms → 131ms) and eliminating a recurring incident class tied to substantial ads revenue risk.",
+      "Architected an Elasticsearch source-of-truth + distributed CDC indexing pipeline for campaign state.",
+      "Delivered a rebuild/backfill system that indexed 14.3M campaigns, improving throughput 26× (150 → 3,900 campaigns/sec) and reducing rebuild time 95% (26 hrs → 1.5 hrs).",
+      "Optimized Elasticsearch infrastructure footprint to reduce cloud spend by $60K/year, including 52.6% production and 83.2% staging infra cost reductions. Right-sized clusters based on cost/performance benchmarking while maintaining reliability targets.",
+    ],
     icon: React.createElement(SiDoordash),
-    tags: [],
+    tags: ["Kotlin", "Elasticsearch", "CockroachDB", "Kafka", "AWS"],
     date: "Jul 2024 - Present",
   },
   {
     title: "Goldman Sachs - Software Engineer Intern",
     location: "New York, NY",
     description:
-      "Developed a Kafka Message Correction Platform to address an ongoing issue with invalid Kafka messages, improving message accuracy and decreasing the need for rollbacks.",
+      "Developed a Kafka Message Correction Platform to address invalid messages, improving message accuracy and reducing rollbacks by 70%. Leveraged MongoDB Atlas as the platform backend and implemented a comprehensive archival system for storing corrected events and metadata for future auditing.",
+    bullets: [
+      "Developed a Kafka Message Correction Platform to address invalid messages, improving message accuracy and reducing rollbacks by 70%.",
+      "Leveraged MongoDB Atlas as the platform backend.",
+      "Implemented a comprehensive archival system for storing corrected events and metadata for future auditing.",
+    ],
     icon: React.createElement(SiGoldmansachs),
     tags: ["React", "Next.js", "Node.js", "Kafka", "MongoDB", "Spring Boot"],
     date: "Jun 2023 - Aug 2023",
@@ -106,6 +127,11 @@ export const experiencesData = [
     location: "Bengaluru, India",
     description:
         "Built user-facing dashboards to display investment banker deal information. Implemented a multi-project CI/CD strategy for multiple projects. Wrote applications to extract and massage data from data warehouses.",
+    bullets: [
+      "Built user-facing dashboards to display investment banker deal information.",
+      "Implemented a multi-project CI/CD strategy for multiple projects.",
+      "Wrote applications to extract and massage data from data warehouses.",
+    ],
     icon: React.createElement(SiGoldmansachs),
     tags: ["React", "MongoDB", "Spring Boot", "ElasticSearch", "Spark", "Hadoop", "Kubernetes (K8s)", "Gitlab CI/CD"],
     date: "Jul 2021 - Jun 2022",
@@ -114,15 +140,45 @@ export const experiencesData = [
     title: "Amazon - Software Engineer Intern",
     location: "Bengaluru, India",
     description:
-        " Developed and deployed an AI-driven customer support chatbot. This reduced Amazon Prime customer query turnaround time by up to\n" +
-        "90%. The system reduced support staff workload by 16%",
+        "Developed and deployed an AI-driven customer support chatbot. This reduced Amazon Prime customer query turnaround time by up to 90%. The system reduced support staff workload by 16%.",
+    bullets: [
+      "Developed and deployed an AI-driven customer support chatbot.",
+      "This reduced Amazon Prime customer query turnaround time by up to 90%. The system reduced support staff workload by 16%.",
+    ],
     icon: React.createElement(AiOutlineAmazon),
     tags: ["AWS Lex", "Lambda", "DynamoDB", "AWS Amplify", "SQL", "Angular", "AWS Cloudformation"],
     date: "Jan 2021 - Jun 2021",
   },
-] as const;
+] satisfies ExperienceItem[];
 
 export const projectsData = [
+  {
+    title: "DoViz",
+    subtitle: "Intervention-Centric Causal Inference Visualization",
+    dates: "Jan 2024 — May 2024",
+    description:
+      "Built DoViz, an interactive causal inference system that lets users simulate interventions, condition on confounders, and compare counterfactual scenarios with quantile-based visualizations. Built an end-to-end experimentation pipeline on AWS SageMaker for reproducible training, versioning, and deployment, and served low-latency real-time inference endpoints to power an interactive React client.",
+    tags: ["React", "AWS SageMaker", "PyTorch", "Causal Inference"],
+    pdf: "https://drive.google.com/file/d/1hVxWUQCdlfDXtGSQ3jIxMk0PW0Y5jV-e/view?usp=drive_link",
+  },
+  {
+    title: "Generative Storywriter",
+    subtitle: "LLMs & Illustration Synthesis",
+    dates: "Aug 2023 — Dec 2023",
+    description:
+      "Built a full-stack generative story application using GPT-3.5 for narrative generation and DALL-E for illustration synthesis. Implemented a backend pipeline that produces structured story outputs, splits them into page-level segments, launches parallel image generation jobs, and assembles the final storybook with response caching and structured logging across LLM API calls.",
+    tags: ["OpenAI API", "DALL-E", "Node.js"],
+    pdf: "https://drive.google.com/file/d/19Ae7zWj3RSO2TarQVyupQaTucXjAdbfk/view?usp=drive_link",
+  },
+  {
+    title: "KeyClass",
+    subtitle: "Weak Supervision for Clinical Text",
+    dates: "Jan 2023 — May 2023",
+    description:
+      "Implemented the KeyClass multi-label architecture for weakly supervised clinical note classification using only class descriptions. Built an end-to-end NLP data pipeline on MIMIC-III (ingestion, preprocessing, and construction of multi-label training datasets) and benchmarked model reproducibility under constrained compute resources.",
+    tags: ["PyTorch", "NLP", "MIMIC-III"],
+    pdf: "https://drive.google.com/file/d/1U6FxiqU5T7LE2ZymJ8zod4NSKZWt54AO/view?usp=drive_link",
+  },
   {
     title: "Open Source Contributions",
     description:
@@ -170,9 +226,30 @@ export const projectsData = [
   }
 ] as const;
 
-export const skillsData = [
-  "Python", "Java", "JavaScript", "TypeScript", "C++", "C", "SQL", "HTML", "CSS", "Bash", "Rust", "Kotlin",
-  "React", "Next.js", "Kafka", "MongoDB", "DynamoDB", "ElasticSearch", "Postgres", "GraphQL", "Django", "Node.js",
-  "AWS", "Azure", "GCP", "Git", "Docker", "Jenkins", "Kubernetes (K8s)", "GitLab CI/CD", "Lambda", "Lex", "Linux"
+export type SkillsCategory = {
+  name: string;
+  skills: readonly string[];
+};
 
-] as const;
+export const skillsCategoriesData = [
+  {
+    name: "Languages",
+    skills: ["Python", "Java", "JavaScript", "TypeScript", "C++", "C", "SQL", "Bash", "Rust", "Kotlin"],
+  },
+  {
+    name: "Web & Frameworks",
+    skills: ["HTML", "CSS", "React", "Next.js", "GraphQL", "Flask", "Django", "Node.js"],
+  },
+  {
+    name: "Data & Databases",
+    skills: ["Kafka", "MongoDB", "MongoDB Atlas", "CockroachDB", "ElasticSearch", "Snowflake", "DynamoDB", "Postgres"],
+  },
+  {
+    name: "ML & AI",
+    skills: ["AWS SageMaker", "PyTorch", "Causal Inference", "AI Agent Development"],
+  },
+  {
+    name: "Cloud & DevOps",
+    skills: ["AWS", "Azure", "GCP", "Lambda", "Lex", "Git", "Docker", "Jenkins", "Kubernetes (K8s)", "GitLab CI/CD", "CI/CD", "Linux"],
+  },
+] as const satisfies readonly SkillsCategory[];

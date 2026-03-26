@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Atharv | Personal Portfolio",
-  description: "Atharv is a software engineer with 1 year of experience.",
+  description: "Atharv Chandratre — Software Engineer II at DoorDash. UIUC M.S. in Computer Science (Machine Learning). Backend, data systems, and applied ML.",
 };
 
 export default function RootLayout({
